@@ -1,6 +1,7 @@
 package br.com.alura.forum.model;
 
 import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
 
