@@ -15,10 +15,15 @@ public class TopicosController {
 
 	@Autowired
 	public TopicoRepository topicosrepository;
-	
+
 	@RequestMapping("/topicos")
-	public List<TopicoDto> lista(){
-	List<Topico> topicos = topicosrepository.findAll();
-		return TopicoDto.converte(topicos);
+	public List<TopicoDto> lista(String nomeCurso) {
+		if (nomeCurso == null) {
+			List<Topico> topicos = topicosrepository.findAll();
+			return TopicoDto.converte(topicos);
+		} else {
+			List<Topico> topicos = topicosrepository.findByCurso_Nome(nomeCurso);
+			return TopicoDto.converte(topicos);
+		}
 	}
 }
