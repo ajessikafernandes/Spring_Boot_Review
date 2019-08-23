@@ -31,7 +31,7 @@ public class DetalhesTopicoDto {
 		this.emailAutor = topico.getAutor().getEmail();
 		this.status = topico.getStatus();
 		this.respostas = new ArrayList<>();
-			this.respostas.addAll(topico.getRespostas().stream().map(RespostaDto::new).collect(Collectors.toList()));
+		this.respostas.addAll(topico.getRespostas().stream().map(RespostaDto::new).collect(Collectors.toList()));
 	}
 
 	public Long getId() {
