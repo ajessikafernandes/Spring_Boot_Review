@@ -12,8 +12,8 @@ public class TopicoDto {
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime dataCriacao;
-	
-	public TopicoDto(Topico topico){
+
+	public TopicoDto(Topico topico) {
 		this.id = topico.getId();
 		this.titulo = topico.getTitulo();
 		this.mensagem = topico.getMensagem();
@@ -39,5 +39,5 @@ public class TopicoDto {
 	public static List<TopicoDto> converte(List<Topico> topicos) {
 		return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
 	}
-	
+
 }

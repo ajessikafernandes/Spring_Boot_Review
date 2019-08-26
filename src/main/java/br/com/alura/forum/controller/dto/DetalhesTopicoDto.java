@@ -11,18 +11,19 @@ import br.com.alura.forum.model.Topico;
 
 public class DetalhesTopicoDto {
 
-	//private TopicoDto topico; não pode ser declarado desta forma pois a classe DTO retorna apenas dados primitivos
+	// private TopicoDto topico; não pode ser declarado desta forma pois a classe
+	// DTO retorna apenas dados primitivos
 	private Long id;
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime dataCriacao;
-	
+
 	private String nomeAutor;
 	private String emailAutor;
 	private StatusTopico status;
 	private List<RespostaDto> respostas;
-	
-	public DetalhesTopicoDto(Topico topico){
+
+	public DetalhesTopicoDto(Topico topico) {
 		this.id = topico.getId();
 		this.titulo = topico.getTitulo();
 		this.mensagem = topico.getMensagem();
@@ -53,7 +54,7 @@ public class DetalhesTopicoDto {
 	public String getNomeAutor() {
 		return nomeAutor;
 	}
-	
+
 	public String getEmailAutor() {
 		return emailAutor;
 	}
@@ -65,7 +66,5 @@ public class DetalhesTopicoDto {
 	public List<RespostaDto> getRespostas() {
 		return respostas;
 	}
-	
-	
 
 }

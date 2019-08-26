@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ErrorValidationHandler {
-	
+
 	@Autowired
 	private MessageSource messageSource;
 
 	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public List<ErroFormDto> handle(MethodArgumentNotValidException exception){
+	public List<ErroFormDto> handle(MethodArgumentNotValidException exception) {
 		List<ErroFormDto> dto = new ArrayList<>();
 		List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
 		fieldErrors.forEach(e -> {
@@ -29,7 +29,7 @@ public class ErrorValidationHandler {
 			ErroFormDto erro = new ErroFormDto(e.getField(), mensagem);
 			dto.add(erro);
 		});
-		
+
 		return dto;
 	}
 }

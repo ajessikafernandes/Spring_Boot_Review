@@ -11,11 +11,16 @@ import br.com.alura.forum.repository.CursoRepository;
 
 public class TopicoForm {
 
-	@NotNull @NotEmpty @Length(min = 5)
+	@NotNull
+	@NotEmpty
+	@Length(min = 5)
 	private String titulo;
-	@NotNull @NotEmpty @Length(max = 100)
+	@NotNull
+	@NotEmpty
+	@Length(max = 100)
 	private String mensagem;
-	@NotNull @NotEmpty
+	@NotNull
+	@NotEmpty
 	private String nomeCurso;
 
 	public String getTitulo() {

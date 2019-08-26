@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloControl {
 
 	@RequestMapping("/")
-	@ResponseBody  	//para que o spring não pesquise o retorno do metódo abaixo como outra página
-	public String hello () {
+	@ResponseBody // para que o spring não pesquise o retorno do metódo abaixo como outra página
+	public String hello() {
 		return "Hello World using Spring Boot.";
 	}
 }

@@ -11,7 +11,7 @@ public class RespostaDto {
 	private String nomeAutor;
 	private String emailAutor;
 	private LocalDateTime dataCriacao;
-	
+
 	public RespostaDto(Resposta resposta) {
 		this.id = resposta.getId();
 		this.mensagem = resposta.getMensagem();
@@ -38,6 +38,6 @@ public class RespostaDto {
 
 	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
-	}	
-	
+	}
+
 }
