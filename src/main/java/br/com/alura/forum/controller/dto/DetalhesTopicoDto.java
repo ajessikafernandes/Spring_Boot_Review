@@ -53,6 +53,10 @@ public class DetalhesTopicoDto {
 	public String getNomeAutor() {
 		return nomeAutor;
 	}
+	
+	public String getEmailAutor() {
+		return emailAutor;
+	}
 
 	public StatusTopico getStatus() {
 		return status;
